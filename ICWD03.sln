@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryLib", "GeometryLib\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryLib2", "GeometryLib2\GeometryLib2.csproj", "{B99BA572-C379-4FC2-BB53-BBEF5D1F5024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForm", "WinForm\WinForm.csproj", "{649AB86B-C596-46A9-90DC-C3FDF6742BCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B99BA572-C379-4FC2-BB53-BBEF5D1F5024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B99BA572-C379-4FC2-BB53-BBEF5D1F5024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B99BA572-C379-4FC2-BB53-BBEF5D1F5024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649AB86B-C596-46A9-90DC-C3FDF6742BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649AB86B-C596-46A9-90DC-C3FDF6742BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649AB86B-C596-46A9-90DC-C3FDF6742BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649AB86B-C596-46A9-90DC-C3FDF6742BCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

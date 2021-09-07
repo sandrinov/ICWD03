@@ -43,6 +43,10 @@
   <ItemGroup>
     <Compile Include="BankAccount.cs" />
     <Compile Include="BankClient.cs" />
+    <Compile Include="BankClientDoubleVIP.cs" />
+    <Compile Include="BankClientVIP.cs" />
+    <Compile Include="BankManager.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

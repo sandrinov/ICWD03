@@ -15,6 +15,11 @@ namespace BankLibrary
             AccountNumber = accountNumber;
             balance = initialBalance;
         }
+        public BankAccount(string accountNumber)
+        {
+            AccountNumber = accountNumber;
+            balance = 0;
+        }
         public double GetBalance()
         {
             return balance;

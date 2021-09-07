@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace BankLibrary
 {
-    public class BankClient
+    public class BankClient : Person
     {
-        public String FirstName { get; set; }
-        public String LastName { get; set; }
-        public String  Address { get; set; }
         public List<BankAccount> Accounts { get; set; }
 
         public BankClient()

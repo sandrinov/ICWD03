@@ -16,9 +16,10 @@ namespace WinForm
         public Form1()
         {
             InitializeComponent();
+            MyClass mycl = new MyClass(this.button1);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void myeventhandler_click(object sender, EventArgs e)
         {
             // crere 3 istanze di Persona e metterle in una lista di Persona
             // assegnarvi i valori delle proprietà nome, cognome e indirizzo (contestualmente

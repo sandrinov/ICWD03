@@ -5,6 +5,7 @@ using System;
 
 namespace ConsoleApp
 {
+    public delegate int MyDelegate(string s);
     class Program
     {
         static void Main(string[] args)
@@ -14,7 +15,23 @@ namespace ConsoleApp
             //TestBankAccountWithClient();
             //TestInheritance();
             //TestGeometry1();
-            TestGeometry2();
+            //TestGeometry2();
+            Testdelegate();
+        }
+        private static void Testdelegate()
+        {
+            MyDelegate md1 = new MyDelegate(GetLengthOfString);
+            MyDelegate md2 = new MyDelegate(GetLengthOfString);
+            MyDelegate md3 = new MyDelegate(GetLengthOfString);
+
+            int result = md1("aaaaaaaaaaa");
+            Console.WriteLine(result);
+
+            int res = GetLengthOfString("aaaaaaaa");
+        }
+        public static int GetLengthOfString(String s)
+        {
+            return s.Length;
         }
 
         private static void TestGeometry2()
@@ -28,7 +45,6 @@ namespace ConsoleApp
         {
             Console.WriteLine("Area: {0} Perimetro: {1}", fg.GetArea(), fg.GetPerimetro());
         }
-
         private static void TestGeometry1()
         {
             //Cerchio c1 = new Cerchio(10);

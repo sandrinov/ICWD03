@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +27,9 @@ namespace WinForm
             // assegnarvi i valori delle proprietà nome, cognome e indirizzo (contestualmente
             // alla creazione di ciascuna istanza)
             // inserire ciascuna persona nell'elenco Listbox
+
+            Thread.Sleep(5000);
+
 
             List<Person> persons = new List<Person>();
 
@@ -47,6 +52,37 @@ namespace WinForm
         {
             this.label1.Text = "";
             this.label1.Text = this.listBox1.SelectedItem.ToString();
+        }
+
+        private async void StartButton_Click(object sender, EventArgs e)
+        {
+            var task = AccessTheWebAsync();
+            //.......
+            int length = await task;
+            //label2.Text += "Url Content Length: " + length;
+
+            //int length = await AccessTheWebAsync();
+            resultTextBox.Text += "Url Content Length: " + length;
+        }
+        private async Task<int> AccessTheWebAsync()
+        {
+            
+            HttpClient client = new HttpClient();
+
+            Task<String> getStringTask = client.GetStringAsync("http://neverssl.com/");
+            DoIndipendentWork();
+
+            string urlContent = await getStringTask;
+            return urlContent.Length;
+        }
+        private void DoIndipendentWork()
+        {
+            //resultTextBox.Text += "Working ....\r\n";
+
+            for (int i = 0; i < 10; i++)
+            {
+                resultTextBox.Text += "Working ...." + "i" + "\r\n";
+            }
         }
     }
 }
